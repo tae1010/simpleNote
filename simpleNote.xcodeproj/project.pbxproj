@@ -14,6 +14,8 @@
 		935F162227DB709D000DAA4C /* simpleNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 935F162027DB709D000DAA4C /* simpleNote.xcdatamodeld */; };
 		935F162427DB709F000DAA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935F162327DB709F000DAA4C /* Assets.xcassets */; };
 		935F162727DB709F000DAA4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935F162527DB709F000DAA4C /* LaunchScreen.storyboard */; };
+		935F162F27DCB0D5000DAA4C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F162E27DCB0D5000DAA4C /* Note.swift */; };
+		935F163327DCBD13000DAA4C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F163227DCBD13000DAA4C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		935F162327DB709F000DAA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935F162627DB709F000DAA4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		935F162827DB709F000DAA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935F162E27DCB0D5000DAA4C /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		935F163227DCBD13000DAA4C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				935F162527DB709F000DAA4C /* LaunchScreen.storyboard */,
 				935F162827DB709F000DAA4C /* Info.plist */,
 				935F162027DB709D000DAA4C /* simpleNote.xcdatamodeld */,
+				935F163227DCBD13000DAA4C /* TableViewCell.swift */,
+				935F162E27DCB0D5000DAA4C /* Note.swift */,
 			);
 			path = simpleNote;
 			sourceTree = "<group>";
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935F162F27DCB0D5000DAA4C /* Note.swift in Sources */,
 				935F161C27DB709D000DAA4C /* ViewController.swift in Sources */,
 				935F161827DB709D000DAA4C /* AppDelegate.swift in Sources */,
+				935F163327DCBD13000DAA4C /* TableViewCell.swift in Sources */,
 				935F161A27DB709D000DAA4C /* SceneDelegate.swift in Sources */,
 				935F162227DB709D000DAA4C /* simpleNote.xcdatamodeld in Sources */,
 			);
