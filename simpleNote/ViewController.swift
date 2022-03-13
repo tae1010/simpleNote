@@ -15,23 +15,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .black
+    
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        let tableViewNib = UINib(nibName: "notecell", bundle: nil)
+        
+        self.tableView.register(tableViewNib, forCellReuseIdentifier: "notecell")
+    
         // Do any additional setup after loading the view.
     }
     
     @IBAction func addTapButton(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "메모", message: nil, preferredStyle: .alert)
         
-       
-        
         let registerButton = UIAlertAction(title: "등록", style: .default, handler: { [weak self] _ in
             
             guard let title = alert.textFields?[0].text else { return }
             
-            guard let content = alert.textFields?[1].text else {return}
-            
-            let note = Note(title: title, content: content)
+            let note = Note(title: title, content: "내용없음", important: false)
             self?.note.append(note)
             self?.tableView.reloadData()
         })
@@ -41,25 +44,17 @@ class ViewController: UIViewController {
         alert.addAction(registerButton)
         alert.addAction(cancelButton)
         
-        alert.addTextField(configurationHandler: { textfield1 in
-            textfield1.placeholder = "제목을 입력해주세요."
-        })
-        alert.addTextField(configurationHandler: { textfield2 in
-            textfield2.placeholder = "내용을 입력해주세요."
+        alert.addTextField(configurationHandler: { textfield in
+            textfield.placeholder = "제목을 입력해주세요."
         })
         
         self.present(alert, animated: true, completion: nil)
     }
-    
-
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            if indexPath.row == 1 {
-                return 200
-            }
-
+            
             return UITableView.automaticDimension
     }
 }
@@ -67,11 +62,10 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! TableViewCell
         let note = self.note[indexPath.row]
         
-        cell.titleLabel.text = note.title
-        cell.contentLabel.text = note.content
+        cell.titleLabel?.text = note.title
 
         return cell
     }

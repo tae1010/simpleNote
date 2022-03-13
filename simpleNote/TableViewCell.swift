@@ -11,7 +11,8 @@ class TableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var importantButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
