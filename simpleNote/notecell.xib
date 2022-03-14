@@ -28,6 +28,9 @@
                         <rect key="frame" x="40" y="85" width="45.5" height="47"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="tapImportantButton:" destination="Rk7-BO-HTv" eventType="touchUpInside" id="J30-KC-kgr"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

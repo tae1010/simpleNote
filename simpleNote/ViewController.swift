@@ -57,18 +57,43 @@ extension ViewController: UITableViewDelegate {
             
             return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var note = self.note[indexPath.row]
+        note.important = !note.important
+        self.note[indexPath.row] = note
+        
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        print(note)
+    }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource,ImportantCheckDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! TableViewCell
         let note = self.note[indexPath.row]
         
         cell.titleLabel?.text = note.title
+        cell.index = indexPath.row
+        cell.cellDelegate = self
+        
+        if note.important {
+            print("fillheart")
+            cell.importantButton.setImage(UIImage(named: "heart.fill"), for: .normal)
+        } else {
+            cell.importantButton.setImage(UIImage(named: "heart"), for: .normal)
+            print("heart")
+        }
 
         return cell
     }
+    
+    func imporantButtonTap(cell: UITableViewCell) {
+        let heartFillImage = UIImage(named: "heart.fill")
+        let indexPath = self.tableView.indexPath(for: cell)
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.note.count
