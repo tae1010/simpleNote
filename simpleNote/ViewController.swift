@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
-    var note = [Note]()
+    var note = [Note]() //셀을 구성하는 note구조체 배열
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,49 +53,55 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             
             return UITableView.automaticDimension
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var note = self.note[indexPath.row]
-        note.important = !note.important
-        self.note[indexPath.row] = note
         
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
-        print(note)
     }
 }
 
-extension ViewController: UITableViewDataSource,ImportantCheckDelegate {
+
+extension ViewController: UITableViewDataSource {
+    
+    //cell을 구성하고 반환
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! TableViewCell
         let note = self.note[indexPath.row]
         
         cell.titleLabel?.text = note.title
-        cell.index = indexPath.row
         cell.cellDelegate = self
         
+        //처음에 cell을 불러올때 important값 확인후 버튼 이미지 불러오기
         if note.important {
-            print("fillheart")
-            cell.importantButton.setImage(UIImage(named: "heart.fill"), for: .normal)
+            cell.importantButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         } else {
-            cell.importantButton.setImage(UIImage(named: "heart"), for: .normal)
-            print("heart")
+            cell.importantButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
 
         return cell
     }
     
-    func imporantButtonTap(cell: UITableViewCell) {
-        let heartFillImage = UIImage(named: "heart.fill")
-        let indexPath = self.tableView.indexPath(for: cell)
-    }
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.note.count
     }
+    
+}
+
+extension ViewController: ImportantCheckDelegate {
+    func imporantButtonTap(cell: UITableViewCell) {
+        guard let indexPath = self.tableView.indexPath(for: cell) else {return}
+        var note = self.note[indexPath.row]
+        
+        note.important = !note.important //버튼클릭시 bool값 변경
+        self.note[indexPath.row] = note // 변경된값을 note배열에 저장
+        self.tableView.reloadRows(at: [indexPath], with: .automatic) //셀안에 버튼클릭시 셀을 reload
+    }
+    
 }
