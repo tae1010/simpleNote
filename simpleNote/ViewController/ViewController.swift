@@ -103,7 +103,10 @@ extension ViewController: UITableViewDelegate {
     //셀 클릭시 발생하는 함수
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        guard let contentViewController = self.storyboard?.instantiateViewController(identifier: "ContentViewController") as? ContentViewController else {return}
+        
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.present(contentViewController, animated: true, completion: nil)
     }
 }
 

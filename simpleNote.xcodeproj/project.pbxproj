@@ -18,6 +18,8 @@
 		935F162F27DCB0D5000DAA4C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F162E27DCB0D5000DAA4C /* Note.swift */; };
 		935F163327DCBD13000DAA4C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F163227DCBD13000DAA4C /* TableViewCell.swift */; };
 		93C293D427E336FA00CA6EDA /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C293D327E336FA00CA6EDA /* CurrentDate.swift */; };
+		93C293DF27E3490800CA6EDA /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C293DE27E3490800CA6EDA /* ContentViewController.swift */; };
+		93C293E127E3491A00CA6EDA /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C293E027E3491A00CA6EDA /* ContentView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		935F162E27DCB0D5000DAA4C /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		935F163227DCBD13000DAA4C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		93C293D327E336FA00CA6EDA /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
+		93C293DE27E3490800CA6EDA /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		93C293E027E3491A00CA6EDA /* ContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				9353B78227DDD9AC000657CC /* notecell.xib */,
 				935F161D27DB709D000DAA4C /* Main.storyboard */,
+				93C293E027E3491A00CA6EDA /* ContentView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				93C293D327E336FA00CA6EDA /* CurrentDate.swift */,
 				935F163227DCBD13000DAA4C /* TableViewCell.swift */,
 				935F161B27DB709D000DAA4C /* ViewController.swift */,
+				93C293DE27E3490800CA6EDA /* ContentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 				935F162727DB709F000DAA4C /* LaunchScreen.storyboard in Resources */,
 				935F162427DB709F000DAA4C /* Assets.xcassets in Resources */,
 				935F161F27DB709D000DAA4C /* Main.storyboard in Resources */,
+				93C293E127E3491A00CA6EDA /* ContentView.xib in Resources */,
 				9353B78327DDD9AC000657CC /* notecell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C293DF27E3490800CA6EDA /* ContentViewController.swift in Sources */,
 				935F162F27DCB0D5000DAA4C /* Note.swift in Sources */,
 				935F161C27DB709D000DAA4C /* ViewController.swift in Sources */,
 				93C293D427E336FA00CA6EDA /* CurrentDate.swift in Sources */,
