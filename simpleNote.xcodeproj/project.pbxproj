@@ -17,6 +17,7 @@
 		935F162727DB709F000DAA4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935F162527DB709F000DAA4C /* LaunchScreen.storyboard */; };
 		935F162F27DCB0D5000DAA4C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F162E27DCB0D5000DAA4C /* Note.swift */; };
 		935F163327DCBD13000DAA4C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F163227DCBD13000DAA4C /* TableViewCell.swift */; };
+		93C293D427E336FA00CA6EDA /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C293D327E336FA00CA6EDA /* CurrentDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		935F162827DB709F000DAA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935F162E27DCB0D5000DAA4C /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		935F163227DCBD13000DAA4C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		93C293D327E336FA00CA6EDA /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				935F163227DCBD13000DAA4C /* TableViewCell.swift */,
 				935F162E27DCB0D5000DAA4C /* Note.swift */,
 				9353B78227DDD9AC000657CC /* notecell.xib */,
+				93C293D327E336FA00CA6EDA /* CurrentDate.swift */,
 			);
 			path = simpleNote;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				935F162F27DCB0D5000DAA4C /* Note.swift in Sources */,
 				935F161C27DB709D000DAA4C /* ViewController.swift in Sources */,
+				93C293D427E336FA00CA6EDA /* CurrentDate.swift in Sources */,
 				935F161827DB709D000DAA4C /* AppDelegate.swift in Sources */,
 				935F163327DCBD13000DAA4C /* TableViewCell.swift in Sources */,
 				935F161A27DB709D000DAA4C /* SceneDelegate.swift in Sources */,

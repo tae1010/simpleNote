@@ -13,11 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
     var note = [Note]() //셀을 구성하는 note구조체 배열
     
-    var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        return dateFormatter
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,15 +32,17 @@ class ViewController: UIViewController {
     @IBAction func addTapButton(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "메모", message: nil, preferredStyle: .alert)
         
+        //alert 등록버튼
         let registerButton = UIAlertAction(title: "등록", style: .default, handler: { [weak self] _ in
             
             guard let title = alert.textFields?[0].text else { return }
             
-            let note = Note(title: title, content: nil, important: false, currentDate: nil)
+            let note = Note(title: title, content: nil, important: false, currentDate: koreanDate())
             self?.note.append(note)
             self?.tableView.reloadData()
         })
         
+        //alert 취소버튼
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         alert.addAction(registerButton)
@@ -57,6 +54,7 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+
 }
 
 extension ViewController: UITableViewDelegate {
@@ -85,7 +83,7 @@ extension ViewController: UITableViewDataSource {
         
         cell.titleLabel?.text = note.title
         cell.cellDelegate = self
-        print(self.dateFormatter)
+        cell.currentDateLabel.text = note.currentDate
         
         //처음에 cell을 불러올때 important값 확인후 버튼 이미지 불러오기
         if note.important {
