@@ -9,6 +9,7 @@ import Foundation
 
 struct Note {
     var title: String
-    var content: String
+    var content: String?
     var important: Bool
+    var currentDate: String?
 }

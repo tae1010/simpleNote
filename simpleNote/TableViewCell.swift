@@ -17,6 +17,7 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var importantButton: UIButton!
+    @IBOutlet weak var currentDateLabel: UILabel!
     
     var note = [Note]()
     
