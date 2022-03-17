@@ -66,6 +66,7 @@
 		935F161627DB709D000DAA4C /* simpleNote */ = {
 			isa = PBXGroup;
 			children = (
+				93C293D927E33AAC00CA6EDA /* Model */,
 				93C293D827E339C500CA6EDA /* ViewController */,
 				93C293D727E339A400CA6EDA /* View */,
 				935F161727DB709D000DAA4C /* AppDelegate.swift */,
@@ -91,11 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				93C293D327E336FA00CA6EDA /* CurrentDate.swift */,
-				935F162E27DCB0D5000DAA4C /* Note.swift */,
 				935F163227DCBD13000DAA4C /* TableViewCell.swift */,
 				935F161B27DB709D000DAA4C /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		93C293D927E33AAC00CA6EDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				935F162E27DCB0D5000DAA4C /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

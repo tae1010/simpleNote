@@ -11,7 +11,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
-    var note = [Note]() //셀을 구성하는 note구조체 배열
+    var note = [Note]() {
+        didSet {
+            self.saveTasks()
+
+        }
+    }//셀을 구성하는 note구조체 배열
     
     
     override func viewDidLoad() {
@@ -24,6 +29,8 @@ class ViewController: UIViewController {
         let tableViewNib = UINib(nibName: "notecell", bundle: nil)
         
         self.tableView.register(tableViewNib, forCellReuseIdentifier: "notecell")
+        
+        self.loadTasks()
     
         // Do any additional setup after loading the view.
     }
@@ -37,7 +44,7 @@ class ViewController: UIViewController {
             
             guard let title = alert.textFields?[0].text else { return }
             
-            let note = Note(title: title, content: nil, important: false, currentDate: koreanDate())
+            let note = Note(title: title, content: "내용을 입력해주세요.", important: false, currentDate: koreanDate())
             self?.note.append(note)
             self?.tableView.reloadData()
         })
@@ -54,7 +61,35 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    func saveTasks() {
+        print("saveTasks")
+        let data = self.note.map {
+            [
+                "title": $0.title,
+                "content": $0.content,
+                "important": $0.important,
+                "currentDate": $0.currentDate
+            ]
+        }
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey: "note")
+    }
+    
+    func loadTasks() {
+        print("loadTasks1")
+        let userDefaults = UserDefaults.standard
+        guard let data = userDefaults.object(forKey: "note") as? [[String: Any]] else {return}
+        print("loadTasks2")
+        self.note = data.compactMap {
+            guard let title = $0["title"] as? String else { return nil }
+            guard let content = $0["content"] as? String else { return nil }
+            guard let important = $0["important"] as? Bool else { return nil }
+            guard let currentDate = $0["currentDate"] as? String else { return nil }
+            print("123123")
+            return Note(title: title, content: content, important: important, currentDate: currentDate)
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate {
@@ -91,7 +126,6 @@ extension ViewController: UITableViewDataSource {
         } else {
             cell.importantButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
-
         return cell
     }
     
