@@ -66,20 +66,36 @@
 		935F161627DB709D000DAA4C /* simpleNote */ = {
 			isa = PBXGroup;
 			children = (
+				93C293D827E339C500CA6EDA /* ViewController */,
+				93C293D727E339A400CA6EDA /* View */,
 				935F161727DB709D000DAA4C /* AppDelegate.swift */,
 				935F161927DB709D000DAA4C /* SceneDelegate.swift */,
-				935F161B27DB709D000DAA4C /* ViewController.swift */,
-				935F161D27DB709D000DAA4C /* Main.storyboard */,
 				935F162327DB709F000DAA4C /* Assets.xcassets */,
 				935F162527DB709F000DAA4C /* LaunchScreen.storyboard */,
 				935F162827DB709F000DAA4C /* Info.plist */,
 				935F162027DB709D000DAA4C /* simpleNote.xcdatamodeld */,
-				935F163227DCBD13000DAA4C /* TableViewCell.swift */,
-				935F162E27DCB0D5000DAA4C /* Note.swift */,
-				9353B78227DDD9AC000657CC /* notecell.xib */,
-				93C293D327E336FA00CA6EDA /* CurrentDate.swift */,
 			);
 			path = simpleNote;
+			sourceTree = "<group>";
+		};
+		93C293D727E339A400CA6EDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9353B78227DDD9AC000657CC /* notecell.xib */,
+				935F161D27DB709D000DAA4C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93C293D827E339C500CA6EDA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93C293D327E336FA00CA6EDA /* CurrentDate.swift */,
+				935F162E27DCB0D5000DAA4C /* Note.swift */,
+				935F163227DCBD13000DAA4C /* TableViewCell.swift */,
+				935F161B27DB709D000DAA4C /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
