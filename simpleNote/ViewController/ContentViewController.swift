@@ -36,11 +36,12 @@ class ContentViewController: UIViewController {
             note[index!].content = ""
         }
         
-        navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
         
     }
     
     @IBAction func exitButton(_ sender: UIButton) {
+        
         navigationController?.popViewController(animated: true)
     }
 }

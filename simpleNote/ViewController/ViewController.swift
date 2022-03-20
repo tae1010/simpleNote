@@ -80,7 +80,14 @@ extension ViewController: UITableViewDelegate {
     //셀 클릭시 발생하는 함수
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //contentviewcontroller객체 선언
+        //noteviewcontroller 객체 선언
+        let noteView = NoteViewController(nibName: "NoteView", bundle: nil)
+        
+        noteView.index = indexPath.row
+        noteView.titleL = note[indexPath.row].title
+        noteView.contentL = note[indexPath.row].content
+        
+        //contentviewcontroller 객체 선언
         let contentView = ContentViewController(nibName: "ContentView", bundle: nil)
         
         //셀 index값 전달
@@ -88,7 +95,7 @@ extension ViewController: UITableViewDelegate {
         contentView.titleText = note[indexPath.row].title
         contentView.contentText = note[indexPath.row].content
         
-        self.navigationController?.pushViewController(contentView, animated: true)
+        self.navigationController?.pushViewController(noteView, animated: true)
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
