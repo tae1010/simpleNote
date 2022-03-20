@@ -8,64 +8,88 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController restorationIdentifier="ContentViewController" id="KkB-dg-WZv" customClass="ContentViewController" customModule="simpleNote" customModuleProvider="target">
-            <view key="view" contentMode="scaleToFill" id="923-Zp-kN9">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvA-Mb-nWl">
-                        <rect key="frame" x="20" y="64" width="374" height="34"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-yq-R7X">
-                        <rect key="frame" x="20" y="138" width="374" height="550"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="550" id="oHZ-iP-2Q6"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX8-j7-p5N">
-                        <rect key="frame" x="20" y="806" width="374" height="38"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="나가기">
-                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                        </buttonConfiguration>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-5V-IdL">
-                        <rect key="frame" x="20" y="748" width="374" height="38"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="작성하기">
-                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                        </buttonConfiguration>
-                    </button>
-                </subviews>
-                <viewLayoutGuide key="safeArea" id="pxN-ex-E74"/>
-                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                <constraints>
-                    <constraint firstItem="VvA-Mb-nWl" firstAttribute="leading" secondItem="pxN-ex-E74" secondAttribute="leading" constant="20" id="3Vs-Do-Vam"/>
-                    <constraint firstItem="aX8-j7-p5N" firstAttribute="top" secondItem="jKO-5V-IdL" secondAttribute="bottom" constant="20" id="3mK-dk-cUz"/>
-                    <constraint firstItem="pxN-ex-E74" firstAttribute="trailing" secondItem="VvA-Mb-nWl" secondAttribute="trailing" constant="20" id="7HW-58-KsB"/>
-                    <constraint firstItem="jKO-5V-IdL" firstAttribute="top" secondItem="Nbp-yq-R7X" secondAttribute="bottom" constant="60" id="AHD-Bb-u6M"/>
-                    <constraint firstItem="Nbp-yq-R7X" firstAttribute="leading" secondItem="pxN-ex-E74" secondAttribute="leading" constant="20" id="ESL-aj-Uct"/>
-                    <constraint firstItem="aX8-j7-p5N" firstAttribute="leading" secondItem="pxN-ex-E74" secondAttribute="leading" constant="20" id="Hcr-kw-rOq"/>
-                    <constraint firstItem="pxN-ex-E74" firstAttribute="trailing" secondItem="Nbp-yq-R7X" secondAttribute="trailing" constant="20" id="IjF-Ls-duC"/>
-                    <constraint firstItem="Nbp-yq-R7X" firstAttribute="top" secondItem="VvA-Mb-nWl" secondAttribute="bottom" constant="40" id="YsW-1N-xXx"/>
-                    <constraint firstItem="jKO-5V-IdL" firstAttribute="leading" secondItem="pxN-ex-E74" secondAttribute="leading" constant="20" id="b8m-2a-QOj"/>
-                    <constraint firstItem="VvA-Mb-nWl" firstAttribute="top" secondItem="pxN-ex-E74" secondAttribute="top" constant="20" id="iXO-Qh-vC7"/>
-                    <constraint firstItem="pxN-ex-E74" firstAttribute="trailing" secondItem="aX8-j7-p5N" secondAttribute="trailing" constant="20" id="lnK-tD-9w3"/>
-                    <constraint firstItem="pxN-ex-E74" firstAttribute="trailing" secondItem="jKO-5V-IdL" secondAttribute="trailing" constant="20" id="skx-DY-4Mg"/>
-                </constraints>
-            </view>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentViewController" customModule="simpleNote" customModuleProvider="target">
             <connections>
-                <outlet property="contentTextField" destination="Nbp-yq-R7X" id="bGi-Rb-bL9"/>
-                <outlet property="titleTextField" destination="VvA-Mb-nWl" id="UkR-ey-YRh"/>
+                <outlet property="contentTextField" destination="VfM-c8-sgy" id="Nea-vu-ji0"/>
+                <outlet property="titleTextField" destination="JzS-qs-RMb" id="LjI-KT-Bl2"/>
+                <outlet property="view" destination="E3s-xp-1RR" id="xVZ-iA-r9Q"/>
             </connections>
-            <point key="canvasLocation" x="325" y="89"/>
-        </viewController>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="E3s-xp-1RR">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-hS-r6q">
+                    <rect key="frame" x="20" y="64" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JzS-qs-RMb">
+                    <rect key="frame" x="20" y="105" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHA-Mn-8AD">
+                    <rect key="frame" x="20" y="169" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfM-c8-sgy">
+                    <rect key="frame" x="20" y="210" width="374" height="500"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="500" id="YMF-pa-JIN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojO-uo-Nqk">
+                    <rect key="frame" x="20" y="750" width="374" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="등록하기">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="BDn-pm-usI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-1c-iK5">
+                    <rect key="frame" x="20" y="805" width="374" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="나가기">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="exitButton:" destination="-1" eventType="touchUpInside" id="OfR-E0-LRj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="my9-FE-7jT"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VfM-c8-sgy" firstAttribute="top" secondItem="ZHA-Mn-8AD" secondAttribute="bottom" constant="20" id="6rm-Md-EUB"/>
+                <constraint firstItem="JzS-qs-RMb" firstAttribute="top" secondItem="PJU-hS-r6q" secondAttribute="bottom" constant="20" id="Fkl-8Y-T8c"/>
+                <constraint firstItem="PJU-hS-r6q" firstAttribute="leading" secondItem="my9-FE-7jT" secondAttribute="leading" constant="20" id="K2S-wA-1au"/>
+                <constraint firstItem="YCm-1c-iK5" firstAttribute="top" secondItem="ojO-uo-Nqk" secondAttribute="bottom" constant="20" id="MAG-LK-uod"/>
+                <constraint firstItem="VfM-c8-sgy" firstAttribute="leading" secondItem="my9-FE-7jT" secondAttribute="leading" constant="20" id="MMO-CH-QDB"/>
+                <constraint firstItem="my9-FE-7jT" firstAttribute="trailing" secondItem="ZHA-Mn-8AD" secondAttribute="trailing" constant="20" id="OIh-KD-uGJ"/>
+                <constraint firstItem="PJU-hS-r6q" firstAttribute="top" secondItem="my9-FE-7jT" secondAttribute="top" constant="20" id="PZg-re-T3O"/>
+                <constraint firstItem="my9-FE-7jT" firstAttribute="trailing" secondItem="ojO-uo-Nqk" secondAttribute="trailing" constant="20" id="UrC-Ve-Rvf"/>
+                <constraint firstItem="my9-FE-7jT" firstAttribute="trailing" secondItem="YCm-1c-iK5" secondAttribute="trailing" constant="20" id="VAn-dN-Tnf"/>
+                <constraint firstItem="YCm-1c-iK5" firstAttribute="leading" secondItem="my9-FE-7jT" secondAttribute="leading" constant="20" id="cSE-3E-JBU"/>
+                <constraint firstItem="ZHA-Mn-8AD" firstAttribute="top" secondItem="JzS-qs-RMb" secondAttribute="bottom" constant="30" id="d4n-lE-NAO"/>
+                <constraint firstItem="ojO-uo-Nqk" firstAttribute="leading" secondItem="my9-FE-7jT" secondAttribute="leading" constant="20" id="dSq-jR-MDh"/>
+                <constraint firstItem="JzS-qs-RMb" firstAttribute="leading" secondItem="my9-FE-7jT" secondAttribute="leading" constant="20" id="fUb-Xr-LhI"/>
+                <constraint firstItem="ZHA-Mn-8AD" firstAttribute="leading" secondItem="my9-FE-7jT" secondAttribute="leading" constant="20" id="l13-L0-4Eh"/>
+                <constraint firstItem="my9-FE-7jT" firstAttribute="trailing" secondItem="VfM-c8-sgy" secondAttribute="trailing" constant="20" id="o00-7B-8CR"/>
+                <constraint firstItem="ojO-uo-Nqk" firstAttribute="top" secondItem="VfM-c8-sgy" secondAttribute="bottom" constant="40" id="oSo-kf-702"/>
+                <constraint firstItem="my9-FE-7jT" firstAttribute="trailing" secondItem="PJU-hS-r6q" secondAttribute="trailing" constant="20" id="sd2-gd-zvG"/>
+                <constraint firstItem="my9-FE-7jT" firstAttribute="trailing" secondItem="JzS-qs-RMb" secondAttribute="trailing" constant="20" id="yla-1e-r0W"/>
+            </constraints>
+            <point key="canvasLocation" x="-549" y="-11"/>
+        </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">

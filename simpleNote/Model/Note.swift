@@ -7,9 +7,10 @@
 
 import Foundation
 
+//노트 구성
 struct Note {
-    var title: String
-    var content: String
-    var important: Bool
-    var currentDate: String
+    var title: String = ""
+    var content: String = ""
+    var important: Bool = false
+    var currentDate: String = ""
 }
