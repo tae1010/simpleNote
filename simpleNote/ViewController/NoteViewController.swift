@@ -18,6 +18,12 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImage = UIImageView(frame:UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "paper")
+        backgroundImage.contentMode = .scaleToFill
+        view.insertSubview(backgroundImage, at: 0)
+        
         self.titleLabel.text = titleL
         self.contentLabel.text = contentL
     }

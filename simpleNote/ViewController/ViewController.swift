@@ -25,10 +25,15 @@ class ViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
-    
+        
+        let backgroundImage = UIImageView(frame:UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "paper")
+        backgroundImage.contentMode = .scaleToFill
+        view.insertSubview(backgroundImage, at: 0)
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         

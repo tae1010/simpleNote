@@ -11,7 +11,6 @@ protocol ImportantCheckDelegate: AnyObject {
     func imporantButtonTap(cell: UITableViewCell)
 }
 
-
 class TableViewCell: UITableViewCell {
 
     
@@ -25,6 +24,7 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
         // Initialization code
     }
 
